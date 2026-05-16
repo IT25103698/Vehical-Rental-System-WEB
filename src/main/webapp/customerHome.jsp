@@ -4,7 +4,7 @@
 <%@ page import="com.rental.vehiclerentalsystem_v2.VehicleInventoryManagement.Vehicle" %>
 <%@ page import="com.rental.vehiclerentalsystem_v2.VehicleInventoryManagement.VehicleFileManager" %>
 <%@ page import="com.rental.vehiclerentalsystem_v2.rentalpackages.RentalPackage" %>
-<%@ page import="com.rental.vehiclerentalsystem_v2.rentalpackages.PackageManager" %>
+<%@ page import="com.rental.vehiclerentalsystem_v2.rentalpackages.PackageManager.*" %>
 
 <%
     Customer user = (Customer) session.getAttribute("customerUser");
