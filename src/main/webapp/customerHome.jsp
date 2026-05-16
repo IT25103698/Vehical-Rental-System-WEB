@@ -1,10 +1,10 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="java.util.List" %>
-<%@ page import="com.rental.customer.Customer" %>
-<%@ page import="com.rental.VehicleInventoryManagement.Vehicle" %>
-<%@ page import="com.rental.VehicleInventoryManagement.VehicleFileManager" %>
-<%@ page import="com.rental.rentalpackages.RentalPackage" %>
-<%@ page import="com.rental.rentalpackages.PackageManager" %>
+<%@ page import="com.rental.vehiclerentalsystem_v2.customer.Customer" %>
+<%@ page import="com.rental.vehiclerentalsystem_v2.VehicleInventoryManagement.Vehicle" %>
+<%@ page import="com.rental.vehiclerentalsystem_v2.VehicleInventoryManagement.VehicleFileManager" %>
+<%@ page import="com.rental.vehiclerentalsystem_v2.rentalpackages.RentalPackage" %>
+<%@ page import="com.rental.vehiclerentalsystem_v2.rentalpackages.PackageManager" %>
 
 <%
     Customer user = (Customer) session.getAttribute("customerUser");
@@ -40,7 +40,7 @@
         .logout-btn { text-decoration:none; padding:10px 18px; border-radius:14px; background:rgba(255,255,255,0.4); color:#ef4444; font-size:14px; font-weight:700; transition:0.3s; }
         .logout-btn:hover { transform:translateY(-2px); }
         .hero { position:relative; height:88vh; display:flex; align-items:center; justify-content:center; text-align:center; overflow:hidden; padding:20px; }
-        .hero img { position:absolute; width:100%; height:100%; object-fit:cover; opacity:0.35; }
+        .hero img { position:absolute; width:100%; height:100%; object-fit:cover; opacity:0.15; }
         .hero-overlay { position:absolute; inset:0; background:linear-gradient(to bottom, rgba(255,255,255,0.05), rgba(248,250,252,0.6)); }
         .hero-content { position:relative; z-index:10; background:rgba(255,255,255,0.22); backdrop-filter:blur(22px); padding:55px; border-radius:38px; border:1px solid rgba(255,255,255,0.35); box-shadow: 0 20px 45px rgba(0,0,0,0.12); max-width:820px; }
         .hero h1 { font-size:64px; font-weight:800; margin-bottom:20px; color:#1e293b; }
