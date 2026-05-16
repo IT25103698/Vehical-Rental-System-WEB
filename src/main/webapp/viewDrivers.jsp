@@ -100,7 +100,6 @@
             }
         }
 
-        /* ================= HEADER ================= */
 
         .page-header{
             text-align:center;

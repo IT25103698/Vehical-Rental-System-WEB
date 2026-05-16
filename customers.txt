@@ -1,0 +1,3 @@
+CID0001,R.M.L.M.K RAJAPAKSHA,lowaga2003@gmail.com,0716921350,Local,200312200352
+CID0004,John Doe,johndoe.mock@example.com,+1-555-0198-52,Local,4222165892
+CID0005,Amaya Silva,amaya.s@testmail.org,074526899,Local,2001456328
