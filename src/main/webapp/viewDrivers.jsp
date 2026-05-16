@@ -1,5 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ page import="com.rental.driver.Driver" %>
+<%@ page import="com.rental.vehiclerentalsystem_v2.driver.Driver" %>
 
 <%
     Driver[] drivers = (Driver[]) request.getAttribute("drivers");
