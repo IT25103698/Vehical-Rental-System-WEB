@@ -9,10 +9,13 @@ public class DriverService {
     }
 
     public boolean addDriver(Driver driver) {
+
         if (!validateDriver(driver)) {
             return false;
         }
 
+
+        // Check duplicate License Number
         if (isLicenseExists(driver.getLicenseNumber())) {
             System.out.println("License number already exists.");
             return false;
@@ -50,6 +53,18 @@ public class DriverService {
 
         if (driver.getPhone() == null || driver.getPhone().trim().equals("")) {
             System.out.println("Phone cannot be empty.");
+            return false;
+        }
+
+// Check if phone contains only digits
+        if (!driver.getPhone().matches("\\d+")) {
+            System.out.println("Phone number must contain only integers.");
+            return false;
+        }
+
+// Check if phone number has exactly 10 digits
+        if (driver.getPhone().length() != 10) {
+            System.out.println("Phone number must be exactly 10 digits.");
             return false;
         }
 

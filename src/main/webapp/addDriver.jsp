@@ -362,6 +362,26 @@
                 type === "Freelance" ? "block" : "none";
         }
 
+        function validatePhone() {
+
+            let phone =
+                document.getElementById("phone").value;
+
+            let error =
+                document.getElementById("phoneError");
+
+            let regex = /^[0-9]{10}$/;
+
+            if (!regex.test(phone)) {
+
+                error.style.display = "block";
+
+            } else {
+
+                error.style.display = "none";
+            }
+        }
+
     </script>
 
 </head>
@@ -446,8 +466,19 @@
 
                 <input type="text"
                        name="phone"
+                       id="phone"
                        placeholder="Phone Number"
-                       required>
+                       maxlength="10"
+                       pattern="[0-9]{10}"
+                       required
+                       oninput="validatePhone()">
+
+                <small id="phoneError"
+                       style="color:red; display:none; font-size:11px; margin-top:5px;">
+
+                    Phone number must contain exactly 10 digits.
+
+                </small>
 
             </div>
 

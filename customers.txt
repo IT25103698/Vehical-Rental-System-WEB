@@ -1,6 +1,4 @@
 CID0001,R.M.L.M.K RAJAPAKSHA,lowaga2003@gmail.com,0716921350,Local,200312200352
 CID0004,John Doe,johndoe.mock@example.com,+1-555-0198-52,Local,4222165892
-CID0005,Amaya Silva,amaya.s@testmail.org,074526899,Local,2001456210
-CID0006,J.N.Nadun Perea,Nadun@gmail.comm,0758421369,Local,20084123668
-CID0002,MIAZ BARSHIL,Miaz@gmail.com,+91 0239584755,Local,0087456321X
-CID0004,R.M.L.M.K RAJAPAKSHA,lowaga2003@gmail.com,0716921350,Local,20031250822
+CID0005,Amaya Silva,amaya.s@testmail.org,074526899,Local,2001456328
+0002,Sakitha,s@g,11,Local,2222
