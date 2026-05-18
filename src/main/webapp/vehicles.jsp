@@ -1,8 +1,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="java.util.List" %>
 <%-- Exact match to your Java file's package --%>
-<%@ page import="com.rental.VehicleInventoryManagement.Vehicle" %>
-<%@ page import="com.rental.VehicleInventoryManagement.VehicleFileManager" %>
+<%@ page import="com.rental.vehiclerentalsystem_v2.VehicleInventoryManagement.Vehicle" %>
+<%@ page import="com.rental.vehiclerentalsystem_v2.VehicleInventoryManagement.VehicleFileManager" %>
 
 <!DOCTYPE html>
 <html>
