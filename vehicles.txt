@@ -1,1 +1,2 @@
 VID0001,Toyota,LC1000,WP-6788-26,25000.0,SUV,true
+VID0003,Toyota,Vitz,WP-CL-005,6000.0,Car,Petrol
