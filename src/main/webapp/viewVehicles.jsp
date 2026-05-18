@@ -1,10 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ page import="java.util.List" %>
-<%-- Exact match to your Java file's package --%>
-<%@ page import="com.rental.VehicleInventoryManagement.Vehicle" %>
-<%@ page import="com.rental.VehicleInventoryManagement.VehicleFileManager" %>
+<%-- UPDATED IMPORT: Matches your new Spring Boot package structure exactly --%>
+<%@ page import="com.rental.vehiclerentalsystem_v2.VehicleInventoryManagement.*, java.util.List" %>
 
-<!DOCTYPE html>
 <html>
 <head>
     <title>Vehicle Inventory</title>
@@ -45,11 +42,12 @@
             <%
                 try {
                     VehicleFileManager manager = new VehicleFileManager();
+                    // Pulling the list of all vehicles via your FileManager
                     List<Vehicle> list = manager.getAllVehicles();
 
                     if (list != null && !list.isEmpty()) {
                         for (Vehicle v : list) {
-                            // Automatically detects if it is a Car, Van, or SUV class
+                            // Using Java Reflection to automatically detect Car, Van, or SUV
                             String vehicleType = v.getClass().getSimpleName();
 
                             // Choose an icon based on the type
@@ -75,7 +73,7 @@
             <%
                         }
                     } else {
-                        out.println("<div style='grid-column: 1 / -1; text-align: center; padding: 40px; color: #64748b;'>No vehicles found in the fleet.</div>");
+                        out.println("<div style='grid-column: 1 / -1; text-align: center; padding: 40px; color: #64748b;'>No vehicles found in the active fleet.</div>");
                     }
                 } catch (Exception e) {
                     out.println("<div style='grid-column: 1 / -1; color: #ef4444; font-weight: bold;'>Java Error: " + e.getMessage() + "</div>");
