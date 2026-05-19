@@ -21,6 +21,7 @@ public abstract class Driver {
         this.available = available;
         this.assignedVehicleId = assignedVehicleId;
     }
+//abstract methods
 
     public abstract double calculatePayment();
     public abstract String getDriverType();

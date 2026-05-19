@@ -9,13 +9,13 @@ public class DriverController {
 
     private DriverService driverService = new DriverService();
 
-    // VIEW ALL DRIVERS (FIXED VIEW NAME)
+    // Handles get requests for view drivers
     @GetMapping("/driver")
     public String showDriverPage(Model model) {
 
         Driver[] drivers = driverService.getAllDrivers();
         int count = driverService.getAllDriverCount();
-
+      //driver array to view page
         model.addAttribute("drivers", drivers);
         model.addAttribute("count", count);
 
@@ -23,7 +23,7 @@ public class DriverController {
         return "viewDrivers";
     }
 
-    // ADD DRIVER
+    // Handling addDriver form
     @PostMapping("/driver/add")
     public String addDriver(
             @RequestParam String driverId,
@@ -87,7 +87,7 @@ public class DriverController {
         return "redirect:/driver";
     }
 
-    // here
+
     @PostMapping("/driver/updateFreelancePayment")
     public String updateFreelancePayment(
 

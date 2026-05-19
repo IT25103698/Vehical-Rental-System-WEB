@@ -456,7 +456,7 @@
         </div>
 
         <div class="info">
-            🆔 <%= drivers[i].getNic() %>
+            NIC: <%= drivers[i].getNic() %>
         </div>
 
         <div class="payment">

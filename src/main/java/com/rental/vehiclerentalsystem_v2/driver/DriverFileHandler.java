@@ -7,7 +7,7 @@ public class DriverFileHandler {
     public DriverFileHandler() {
         createFileIfNotExists();
     }
-
+// Automatically creates a text file
     private void createFileIfNotExists() {
         try {
             java.io.File file = new java.io.File(FILE_NAME);
@@ -61,6 +61,7 @@ public class DriverFileHandler {
                 String assignedVehicleId = data[7];
                 String type = data[8];
 
+// creating an array according to the object type
                 if (type.equalsIgnoreCase("FullTime")) {
                     double monthlySalary = Double.parseDouble(data[9]);
 
@@ -89,7 +90,7 @@ public class DriverFileHandler {
 
         return drivers;
     }
-
+// Driver count
     public int getDriverCount() {
         int count = 0;
 
@@ -113,7 +114,7 @@ public class DriverFileHandler {
 
         return count;
     }
-
+// Searching a driver using License Number
     public Driver searchByLicense(String licenseNumber) {
         Driver[] drivers = getAllDrivers();
         int count = getDriverCount();
@@ -148,9 +149,10 @@ public class DriverFileHandler {
 
         return found;
     }
-
+// find the driver, left shift , reduce the count , rewrite
     public boolean deleteDriver(String licenseNumber) {
         Driver[] drivers = getAllDrivers();
+        // calling getDriverCount
         int count = getDriverCount();
         boolean found = false;
 
@@ -175,7 +177,7 @@ public class DriverFileHandler {
 
         return found;
     }
-
+//  Rewrite the file after deleting and updating
     public void writeAllDrivers(Driver[] drivers, int count) {
         try {
             java.io.FileWriter writer = new java.io.FileWriter(FILE_NAME);

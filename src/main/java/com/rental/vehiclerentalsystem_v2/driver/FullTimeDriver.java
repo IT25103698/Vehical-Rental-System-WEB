@@ -17,15 +17,15 @@ public class FullTimeDriver extends Driver {
     public void setMonthlySalary(double monthlySalary) {
         this.monthlySalary = monthlySalary;
     }
-
+// override from abstract methods
     public double calculatePayment() {
         return monthlySalary;
     }
-
+//Driver type for file handling
     public String getDriverType() {
         return "FullTime";
     }
-
+// converting obj data into csv
     public String toFileString() {
         return getDriverId() + "," +
                 getName() + "," +

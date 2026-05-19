@@ -27,7 +27,7 @@ public class FreelanceDriver extends Driver {
     public void setCommissionPerTrip(double commissionPerTrip) {
         this.commissionPerTrip = commissionPerTrip;
     }
-
+// override from abstract method
     public double calculatePayment() {
         return tripsCompleted * commissionPerTrip;
     }

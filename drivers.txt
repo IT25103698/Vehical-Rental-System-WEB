@@ -1,2 +1,3 @@
-001,Ashen,2005667893,100,0715906864,Jaffna,true,none,FullTime,50000.0,0
-eee,eeee,eee,ee,eee,eee,true,none,FullTime,212.0,0
+01,Ashen,200588449v,A01,0715894736,Mathara,true,none,FullTime,45000.0,0
+02,Kasun,200583978,A02,0714908543,jaffna,true,none,Freelance,0,0.0
+03,Rajapaksha,2002239984,A03,0756889830,Katunayake,false,none,FullTime,45000.0,0

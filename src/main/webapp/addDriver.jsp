@@ -541,17 +541,7 @@
 
             </div>
 
-            <div id="commissionField"
-                 class="input-group"
-                 style="display:none;">
 
-                <label>Commission Per Trip</label>
-
-                <input type="number"
-                       name="commissionPerTrip"
-                       placeholder="Commission Per Trip">
-
-            </div>
 
             <button type="submit">
                 Complete Driver Registration

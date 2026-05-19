@@ -7,7 +7,7 @@ public class DriverService {
     public DriverService() {
         fileHandler = new DriverFileHandler();
     }
-
+// Registering a new driver
     public boolean addDriver(Driver driver) {
 
         if (!validateDriver(driver)) {
@@ -29,7 +29,7 @@ public class DriverService {
         fileHandler.addDriver(driver);
         return true;
     }
-
+// Validating drivers form
     public boolean validateDriver(Driver driver) {
         if (driver.getDriverId() == null || driver.getDriverId().trim().equals("")) {
             System.out.println("Driver ID cannot be empty.");
@@ -72,7 +72,7 @@ public class DriverService {
             System.out.println("Address cannot be empty.");
             return false;
         }
-
+//Checks driver type during runtime
         if (driver instanceof FullTimeDriver) {
             FullTimeDriver d = (FullTimeDriver) driver;
             if (d.getMonthlySalary() < 0) {
@@ -105,6 +105,7 @@ public class DriverService {
         return fileHandler.searchByLicense(licenseNumber);
     }
 
+// View All drivers
     public Driver[] getAllDrivers() {
         return fileHandler.getAllDrivers();
     }
@@ -113,37 +114,9 @@ public class DriverService {
         return fileHandler.getDriverCount();
     }
 
-    public Driver[] getAvailableDrivers() {
-        Driver[] allDrivers = fileHandler.getAllDrivers();
-        int totalCount = fileHandler.getDriverCount();
 
-        Driver[] availableDrivers = new Driver[MAX_DRIVERS];
-        int index = 0;
 
-        for (int i = 0; i < totalCount; i++) {
-            if (allDrivers[i] != null && allDrivers[i].isAvailable()) {
-                availableDrivers[index] = allDrivers[i];
-                index++;
-            }
-        }
-
-        return availableDrivers;
-    }
-
-    public int getAvailableDriverCount() {
-        Driver[] allDrivers = fileHandler.getAllDrivers();
-        int totalCount = fileHandler.getDriverCount();
-        int count = 0;
-
-        for (int i = 0; i < totalCount; i++) {
-            if (allDrivers[i] != null && allDrivers[i].isAvailable()) {
-                count++;
-            }
-        }
-
-        return count;
-    }
-
+// driver Availability update
     public boolean updateDriverAvailability(String licenseNumber, boolean availability) {
         Driver driver = fileHandler.searchByLicense(licenseNumber);
 
@@ -159,14 +132,14 @@ public class DriverService {
 
         return fileHandler.updateDriver(driver);
     }
-
+// Delete a driver
     public boolean deleteDriver(String licenseNumber) {
         Driver driver = fileHandler.searchByLicense(licenseNumber);
 
         if (driver == null) {
             return false;
         }
-
+// checking if the driver is Available
         if (!driver.isAvailable()) {
             System.out.println("Cannot delete assigned driver.");
             return false;
@@ -175,38 +148,6 @@ public class DriverService {
         return fileHandler.deleteDriver(licenseNumber);
     }
 
-    public boolean assignDriverToVehicle(String licenseNumber, String vehicleId) {
-        Driver driver = fileHandler.searchByLicense(licenseNumber);
-
-        if (driver == null) {
-            System.out.println("Driver not found.");
-            return false;
-        }
-
-        if (!driver.isAvailable()) {
-            System.out.println("Driver is not available.");
-            return false;
-        }
-
-        driver.setAssignedVehicleId(vehicleId);
-        driver.setAvailable(false);
-
-        return fileHandler.updateDriver(driver);
-    }
-
-    public boolean releaseDriverFromVehicle(String licenseNumber) {
-        Driver driver = fileHandler.searchByLicense(licenseNumber);
-
-        if (driver == null) {
-            System.out.println("Driver not found.");
-            return false;
-        }
-
-        driver.setAssignedVehicleId("none");
-        driver.setAvailable(true);
-
-        return fileHandler.updateDriver(driver);
-    }
 
     public boolean updateFreelancePayment(
             String licenseNumber,
